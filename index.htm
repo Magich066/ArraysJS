@@ -1,0 +1,255 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      // let user = {
+      //     name: "maga",
+      //     age: 30
+      // }
+      // console.log(user);
+
+      // let fruits = ["banan" , "orange"]
+      // console.log(fruits[1]);
+
+      // let cars = ["BMW" , "AYDI", "MERSEDEC"]
+      // // console.log(cars.length);
+      // for(let i = 0; i < cars.length; i++){
+      //     console.log(cars[i]);
+      // }
+
+      // let names = ["MAga",  "ilez", "Alecs", "Makc"]
+      // for(let i = 0;i < names.length; i++){
+      //     console.log(names[i]);
+      // }
+
+      function fruitsCount(array) {
+        let count = 0;
+
+        for (let i = 0; i < array.length; i++) {
+          console.log(array[i]);
+          count++;
+        }
+        return "КОличество фруктов" + count;
+      }
+      fruitsCount(["Banan", "orange", "grey"]);
+
+
+
+
+      function carsCount(array = []){
+        let count = 0;
+        for (let i = 0; i < array.length;    i++)
+      { console.log(array[i]);
+        count++
+      }
+      return "Количество автомобилей" + count
+      }
+      carsCount(["BMW", "MERSEDEC", "AUDI", "TOYOTA", 
+      "HONDA", "VAZ", "LADA", "JEEP", "BUGATTI", "CHEVROLET", "", "", ""]);
+
+
+    </script>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<!-- Говорим браузеру: это HTML5 -->
+<html lang="en">
+  <!-- Корневой тег, язык страницы — английский -->
+  <head>
+    <!-- Служебная часть, не видна пользователю -->
+    <meta charset="UTF-8" />
+    <!-- Кодировка UTF-8, чтобы русские буквы отображались правильно -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Для корректного отображения на телефонах -->
+    <title>Document</title>
+    <!-- Название вкладки в браузере -->
+  </head>
+  <body>
+    <!-- Видимая часть страницы -->
+    <script>
+      <!-- Начало JS-кода -->
+
+      //   // let user = {                            // Объявление объекта (закомментировано — не выполняется)
+      //   //     name: "maga",                        // Свойство name со значением "maga"
+      //   //     age: 30                              // Свойство age со значением 30
+      //   // }
+      //   // console.log(user);                      // Вывело бы объект в консоль
+
+      //   // let fruits = ["banan" , "orange"]        // Массив из двух строк, индексы 0 и 1
+      //   // console.log(fruits[1]);                  // Вывело бы "orange" (индексация с 0)
+
+      //   // let cars = ["BMW" , "AYDI", "MERSEDEC"]  // Массив из трёх марок
+      //   // // console.log(cars.length);             // .length вернёт 3 (количество элементов)
+      //   // for(let i = 0; i < cars.length; i++){    // Цикл: i=0, 1, 2 (пока i < 3)
+      //   //     console.log(cars[i]);                // Печатает BMW, AYDI, MERSEDEC
+      //   // }
+
+      //   // let names = ["MAga",  "ilez", "Alecs", "Makc"]   // Массив имён
+      //   // for(let i = 0;i < names.length; i++){    // Тот же приём на других данных
+      //   //     console.log(names[i]);               // Печатает каждое имя
+      //   // }
+
+      //   function fruitsCount(array) {              // Объявили функцию с параметром array
+      //     let count = 0;                           // Счётчик начинается с нуля
+
+      //     for (let i = 0; i < array.length; i++) { // Проходим по всем элементам массива
+      //       console.log(array[i]);                 // Печатаем текущий элемент
+      //       count++;                               // Увеличиваем счётчик на 1
+      //     }
+      //     return "КОличество фруктов" + count;     // Возвращаем строку + число (склейка через +)
+      //   }                                          // Конец функции fruitsCount
+
+      //   fruitsCount(["Banan", "orange", "grey"]);  // Вызвали функцию, но результат не выводим
+
+      //   function carsCount(array = []){            // Функция с дефолтным значением: если аргумент не передан — пустой массив
+      //     let count = 0;                           // Счётчик с нуля
+      //     for (let i = 0; i < array.length;    i++)// Цикл (лишние пробелы перед i++)
+      //   { console.log(array[i]);                   // Печатаем элемент (скобка { уехала на новую строку)
+      //     count++                                  // Увеличиваем счётчик (нет ;)
+      //   }
+      //   return "Количество автомобилей" + count     // Возвращаем строку + число (нет ;)
+      //   }                                          // Конец функции carsCount
+
+      //   carsCount(["BMW", "MERSEDEC", "AUDI", "TOYOTA",   // Вызов функции с массивом из 13 элементов
+      //   "HONDA", "VAZ", "LADA", "JEEP", "BUGATTI", "CHEVROLET", "", "", ""]);
+      //   // ↑ последние три "" — пустые строки, тоже считаются как элементы
+
+      // // методы массива
+      // // push() Добавляет элемент в конец массива:
+      // const cars = ["audi", "bmw", "Mers"]
+      // cars.push("LADA");
+      // console.log(cars);
+
+      // // pop() удаляет последний элемент массива
+      // cars.pop();
+      // console.log(cars);
+
+      // // unshift() добавляет элемент маасиива в начало
+
+      // let cars2 = ["audi", "bmw", "Mers"]
+      // cars2.unshift("LADA", "TOYOTA")
+      // console.log(cars2);
+
+      //     // shift() удаляет элемент с начало массива
+      // cars2.shift()
+      // console.log(cars2);
+
+      //  function carsPush(){
+      //   let cars = ["BMW" , "AYDI", "MERSEDEC"]
+      //         console.log( cars());
+
+      //         cars.push("LADA");
+      //         console.log(cars);
+
+      // }
+
+
+
+
+
+      //  -----------------------многомерный МАСИВ-----------------
+      // let fruits = [
+      //   [
+      //     "Апельсин",
+      //     "Banan",
+      //     "Orange",
+      //     [
+      //       "bvw",
+      //       "mers",
+      //       [
+      //         " toyota",
+      //         "honda",
+      //         [
+      //           "lll",
+      //           "mmm",
+      //           [
+      //             "google",
+      //             "ghrom",
+      //             [
+      //               "ing",
+      //               "chechnay",
+      //               [
+      //                 "95",
+      //                 "06",
+      //                 [
+      //                   "ooo",
+      //                   "ppp",
+      //                   ["000", "000", ["111", "222", ["333", "3444"]]],
+      //                 ],
+      //               ],
+      //             ],
+      //           ],
+      //         ],
+      //       ],
+      //     ],
+      //   ],
+
+      //   ["Maga", "Ivan", 2, true],
+      // ];
+      // console.log(fruits[0]  [3]  [2]  [2]  [2]  [2]  [2]  [2]  [2]  [2]  [2]  [1]);
+
+
+
+
+
+
+      // let users = [
+      //   {
+      //     name: "Maga",
+      //     age: 25,
+      //   },
+      //   {
+      //     name: "Alex",
+      //     age: 20,
+      //     cars: ["BMW", "MERS"],
+      //   },
+      //   {
+      //     name: "Mussa",
+      //     age: 15,
+      //   },
+      // ];
+      // console.log(users[2].name);
+
+      // users[2].name = "Ivan";
+      // console.log(users);
+      // console.log(users[2].name);
+
+
+      // -----------------------toString - метод который преобразует массив в строку --------------------
+
+      // let cars = ["mers", "bmw", "audi"]
+      // console.log(cars.toString());
+
+      
+      
+
+      //--------------------------сравнение массивов---------------------------------
+
+      console.log([] == []);// false
+      console.log([0] == [0]);// false
+
+      
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+  </body>
+</html>
+
